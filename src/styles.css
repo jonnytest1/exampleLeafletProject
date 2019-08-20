@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/purple-green.css";
+
+
+.mat-button{
+    width:100%;
+    background-color: rgb(211, 176, 23);
+    text-align: left;
+}
+mat-button-toggle{
+    background-color: rgb(211, 176, 23);
+}
