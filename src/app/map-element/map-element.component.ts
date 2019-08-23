@@ -4,7 +4,6 @@ import { Popup } from 'leaflet';
 import { popupBase as PopupBase } from '../map/map.component';
 import { HttpClient } from '@angular/common/http';
 import { DataService } from '../data-service';
-import { multicast } from 'rxjs/operators';
 
 
 @Component({
