@@ -1,8 +1,23 @@
-<p>
-  map-element works!
-  <br> <span>
-    hallo
-  </span><br>
-  {{test}}
-  abc
-</p>
+<div>
+  <table>
+    <tr>
+      <td>cssTest</td>
+      <td>
+        <span>hallo </span>
+      </td>
+    </tr>
+    <tr>
+      <td>pipe test</td>
+      <td> {{ test|async | trans }}</td>
+    </tr>
+    <tr>
+      <td>id</td>
+      <td>{{id}}</td>
+    </tr>
+    <tr>
+      <td>httptest</td>
+      <td>{{data | async}}</td>
+    </tr>
+
+  </table>
+</div>

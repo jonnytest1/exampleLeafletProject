@@ -5,25 +5,25 @@
   "projects": {
     "webpage": {
       "root": "",
-      "sourceRoot": "src",
+      "sourceRoot": "./src",
       "projectType": "application",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "built",
-            "index": "src/index.html",
-            "main": "src/main.ts",
-            "tsConfig": "tsconfig.json",
+            "outputPath": "./built",
+            "index": "./src/index.html",
+            "main": "./src/main.ts",
+            "tsConfig": "./tsconfig.json",
             "deleteOutputPath": false,
-            "polyfills": "src/polyfills.ts",
+            "polyfills": "./src/polyfills.ts",
             "assets": [
-              "src/assets",
-              "src/favicon.ico",
-              "src/manifest.json"
+              "./src/assets",
+              "./src/favicon.ico",
+              "./src/manifest.json"
             ],
             "styles": [
-              "src/styles.css"
+              "./src/styles.css"
             ],
             "scripts": []
           },
@@ -50,12 +50,6 @@
             "production": {
               "browserTarget": "webpage:build:production"
             }
-          }
-        },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "webpage:build"
           }
         }
       }

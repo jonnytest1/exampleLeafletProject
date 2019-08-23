@@ -5,15 +5,26 @@ import { AppComponent } from './app.component';
 
 import { MapComponent } from './map/map.component';
 import { MapElementComponent } from './map-element/map-element.component';
+import { CustomPipe } from './custom-pipe';
+import { DataService } from './data-service';
+import { HttpClientModule } from '@angular/common/http';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     MapComponent,
-    MapElementComponent
+    CustomPipe,
+    MapElementComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule
+  ],exports:[
+    CustomPipe,
+  ],providers:[
+DataService
   ],
   bootstrap: [AppComponent],
   entryComponents: [MapElementComponent]
