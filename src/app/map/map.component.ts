@@ -1,11 +1,9 @@
-import { Component, OnInit, ViewChildren, ComponentFactoryResolver, Injectable, Injector, createInjector, ApplicationRef, ComponentRef, Type } from '@angular/core';
+import { Component, OnInit,  ComponentFactoryResolver,  Injector,  ApplicationRef,  Type, ViewChild, ElementRef } from '@angular/core';
 //import L = require('leaflet');
 import { MapElementComponent } from '../map-element/map-element.component';
 import * as L from 'leaflet';
-import { createCustomElement, NgElementConstructor } from "@angular/elements"
-import { of, Observable, Observer, Subscriber, Subject } from 'rxjs';
+import {  Observable,  Subject } from 'rxjs';
 import { DataService } from '../data-service';
-import { MulticastOperator, multicast } from 'rxjs/internal/operators/multicast';
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
@@ -14,7 +12,7 @@ import { MulticastOperator, multicast } from 'rxjs/internal/operators/multicast'
 
 export class MapComponent implements OnInit {
 
-
+  @ViewChild('#btn',{static:false}) btn:ElementRef; 
   observer:Subject<any>;
   constructor(private injector: Injector,
     private applicationRef: ApplicationRef,
@@ -24,7 +22,6 @@ export class MapComponent implements OnInit {
   }
 
   ngOnInit() {
-
     var mymap = L.map('map').setView([51.505, -0.09], 13).addLayer(L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'));
 
    
